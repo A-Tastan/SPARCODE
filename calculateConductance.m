@@ -1,4 +1,4 @@
-%% This function calculates the conductance of the partition
+%%This function calculates the conductance of the partition
 % 
 % For details see
 % [1] Shi, Jianbo, and Jitendra Malik. "Normalized cuts and image 
