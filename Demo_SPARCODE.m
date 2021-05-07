@@ -1,4 +1,4 @@
-%% The demo file implements 100 Monte Carlo experiments for SPARCODE.
+%%The demo file implements 100 Monte Carlo experiments for SPARCODE.
 % 
 %  The source codes can be freely used for non-commercial use only. 
 %  Please make appropriate references to our article:
@@ -50,10 +50,10 @@ plotting=0;
   
 
 for iter=1:100
-%% Generate a synthetic affinity matrix
+%%Generate a synthetic affinity matrix
 [W, num_nodes_total, num_communities]=generateAffinity(W_opt,plotting);
 
-%% Perform Sparsity-aware Robust Community Detection(SPARCODE)
+%%Perform Sparsity-aware Robust Community Detection(SPARCODE)
 [est_num_com, est_com_mod]=performSparsityAwareRobustCommunityDetection(W,N_rho_initial,N_rho,rho_initial_min,rho_initial_max,maxIt,Tol,plotting);
 %To evaluate conductance (optional)
 % [est_num_com, est_com_mod,est_com_cond]=performSparsityAwareRobustCommunityDetection(W,N_rho_initial,N_rho,rho_initial_min,rho_initial_max,maxIt,Tol,plotting);
