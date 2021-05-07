@@ -34,7 +34,7 @@
 function polarization_vec=calculatePolarizationScoreSet(W,rho_set,maxIt,Tol)
 
 
-%% Calculate polarization scores and stack into a vector
+%%Calculate polarization scores and stack into a vector
 for i=1:length(rho_set)
     
     %Estimate sparse affinity matrix for the ith penalty parameter
