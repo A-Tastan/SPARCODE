@@ -1,4 +1,4 @@
-%% This function creates an affinity matrix based on the selected scenario.
+%%This function creates an affinity matrix based on the selected scenario.
 % 
 % For details about the synthetic data sets :
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -32,7 +32,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [W, num_nodes_total, num_communities]=generateAffinity(W_opt,plotting)
 
-%% Generation of the affinity matrix for the selected scenario
+%%Generation of the affinity matrix for the selected scenario
 if(W_opt=='Scenario1')
      
      [W, num_nodes_total, num_communities]=generateAffinityScenario1(plotting);
