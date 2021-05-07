@@ -1,5 +1,4 @@
-# SPARCODE
-Sparsity-aware Robust Community Detection (SPARCODE)
+# Sparsity-aware Robust Community Detection (SPARCODE)
 We proposed SPARCODE, a community detection method that uses spectral partitioning based on estimating a robust and sparse graph model. The method begins with a densely connected
 graph and produces a preliminary sparsity-improved graph. Then, undesired and negligible edges are removed from the sparsity-improved graph model and the graph construction is 
 performed in a robust manner by detecting the outliers. Finally, fast spectral partitioning is performed on the estimated outlier-free vertices of the robust sparse graph model. 
