@@ -1,4 +1,4 @@
-%% This function calculates the polarization scores
+%%This function calculates the polarization scores
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
