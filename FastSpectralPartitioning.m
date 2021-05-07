@@ -1,4 +1,4 @@
-%% This function performs a fast spectral partitioning.
+%%This function performs a fast spectral partitioning.
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -33,7 +33,7 @@
 function [est_num_com,est_com_mod]=FastSpectralPartitioning(W_tilde,degrees_W_tilde)
 % function [est_num_com,est_com_mod,est_com_cond]=FastSpectralPartitioning(W_tilde,degrees_W_tilde)
 
-%% Estimate K_min and K_max 
+%%Estimate K_min and K_max 
 [counts,centers] = histcounts(degrees_W_tilde,max(degrees_W_tilde)-min(degrees_W_tilde));
 p = counts / sum(counts);  %probability of occurence of degrees
 ind_h=find(p>median(p));
@@ -42,11 +42,11 @@ K_min=round(length(degrees_W_tilde)/(max(h)+1)); %K_min=n_tilde/(h_max+1)
 K_max=round(length(degrees_W_tilde)/(min(h)+1)); %K_max=n_tilde/(h_min+1)
 K_set=K_min:1:K_max;
 
-%% Estimate the Fiedler vector associated with the estimated graph model
+%%Estimate the Fiedler vector associated with the estimated graph model
 y_tilde=FiedlerVector(normc(W_tilde));
 [sorted_y_tilde,ind_sorted_y_tilde]=sort(y_tilde);
 
-%% Partitioning
+%%Partitioning
 for i=1:length(K_set)
 
 q_i=mod(length(degrees_W_tilde),K_set(i)); %number of initially ignored mappings
