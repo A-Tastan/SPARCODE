@@ -1,4 +1,4 @@
-%% This function estimates the Fiedler vector
+%%This function estimates the Fiedler vector
 % 
 % For details see:
 % [1] M. Belkin and P. Niyogi, “Laplacian eigenmaps for dimensionality
@@ -31,13 +31,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function fiedler_vec=FiedlerVector(W)
 
-%% Get diagonal weight matrix D
+%%Get diagonal weight matrix D
 D=diag(sum(W));
 
-%% Compute associated Laplacian matrix
+%%Compute associated Laplacian matrix
 L=D-W;
 
-%% Perform the Fiedler vector estimation for SPARCODE or SPARCODE_F
+%%Perform the Fiedler vector estimation for SPARCODE or SPARCODE_F
 %Run SPARCODE for small scale networks
 if(size(W,1)<=1000)
     [eigenvector_mat,diag_eigenvalue_mat]=eig(L);
