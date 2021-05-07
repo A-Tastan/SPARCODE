@@ -6,7 +6,7 @@ The number of communities is estimated using modularity optimization on partitio
 
 For details, see:
 
-[1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware Robust Community Detection (SPARCODE).", Signal Processing. (accepted)
+[1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware Robust Community Detection (SPARCODE)", Signal Processing. (accepted)
 
 The codes can be freely used for non-commercial use only. Please make appropriate references to our article.
 
