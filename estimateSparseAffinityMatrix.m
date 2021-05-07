@@ -1,4 +1,4 @@
-%% This function estimates a sparse affinity matrix using Graphical Lasso
+%%This function estimates a sparse affinity matrix using Graphical Lasso
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -44,14 +44,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function W_hat=estimateSparseAffinityMatrix(W,rho,maxIt,Tol)
 
-%% Initialization
+%%Initialization
 S=cov(W); 
 p = size(S,1);
 S_hat = S + rho * eye(p);  
 S_hat_old = S_hat;
 i=0;
 
-%% Apply Lasso Regularization
+%%Apply Lasso Regularization
 while i < maxIt
     i = i+1;
     for j=p:-1:1
