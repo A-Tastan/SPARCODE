@@ -20,3 +20,7 @@ or
 https://sourceforge.net/projects/sparsemodels/files/Group%20Lasso%20Shooting/
 
 
+![All_Steps_Sparcode](https://user-images.githubusercontent.com/83693413/117464305-cd355100-af50-11eb-9a00-1592fb85029d.png)
+
+
+
