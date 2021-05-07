@@ -1,4 +1,4 @@
-%% Sparsity-aware Robust Community Detection(SPARCODE)
+%%Sparsity-aware Robust Community Detection(SPARCODE)
 % 
 %  The source codes can be freely used for non-commercial use only. 
 %  Please make appropriate references to our article:
@@ -82,10 +82,10 @@ if(nargin<1 || isempty(W))
 end
 
 
-%% STEP 1 : ESTIMATING ROBUST SPARSE GRAPH MODEL
-%% Step 1.1: Sparsity Optimization
+%%STEP 1 : ESTIMATING ROBUST SPARSE GRAPH MODEL
+%%Step 1.1: Sparsity Optimization
 
-%% Step 1.1.1: Initialization
+%%Step 1.1.1: Initialization
 %Define an initial penalty parameter set
 increasement=(rho_initial_max-rho_initial_min)/(N_rho_initial-1);
 initial_rho_set=rho_initial_min:increasement:rho_initial_max;
@@ -96,17 +96,17 @@ initial_polarization_vec=calculatePolarizationScoreSet(W,initial_rho_set,maxIt,T
 %Regenerate the penalty parameter set
 rho_set=regeneratePenaltySet(initial_rho_set,initial_polarization_vec,N_rho);
 
-%% Step 1.1.2: Penalty Parameter Selection
+%%Step 1.1.2: Penalty Parameter Selection
 %Recalculate polarization scores for the regenerated penalty parameter set
 polarization_vec=calculatePolarizationScoreSet(W,rho_set,maxIt,Tol);
 
 %Apply spline interpolation and estimate the penalty parameter
 rho_hat=estimatePenaltyParameter(rho_set,polarization_vec);
 
-%% Step 1.2: Robustness and Outlier Detection
+%%Step 1.2: Robustness and Outlier Detection
 [W_tilde,degrees_W_tilde]=estimateRobustSparseGraphModel(W,rho_hat,maxIt,Tol,plotting);
 
-%% STEP 2: FAST SPECTRAL PARTITION
+%%STEP 2: FAST SPECTRAL PARTITION
 [est_num_com,est_com_mod]=FastSpectralPartitioning(W_tilde,degrees_W_tilde);
 %[est_num_com,est_com_mod,est_com_cond]=FastSpectralPartitioning(W_tilde,degrees_W_tilde);
 
