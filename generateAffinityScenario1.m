@@ -1,4 +1,4 @@
-%% This function generates an affinity matrix for Scenario 1.
+%%This function generates an affinity matrix for Scenario 1.
 % 
 % For details about Scenario 1, see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -48,7 +48,7 @@
 
 function [W, num_nodes_total, num_communities]=generateAffinityScenario1(plotting)
 
-%% Define communities
+%%Define communities
 community_1=45;
 community_2=community_1+40;
 community_3=community_2+55;
@@ -57,7 +57,7 @@ community_5=community_4+37;
 community_6=community_5+46;
 community_7=community_6+35;
 
-%% Define similarities
+%%Define similarities
 W=[];
 rng('shuffle');
 %Similarities for the Community 1
@@ -288,7 +288,7 @@ end
   W=(W+W.')/2;
   W=W-diag(diag(W));
   
-%% Define number of nodes and communities
+%%Define number of nodes and communities
   num_nodes_total=size(W,1);
   num_communities=7;
   
