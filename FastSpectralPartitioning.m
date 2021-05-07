@@ -99,7 +99,7 @@ Q(i) = calculateModularity(C_hat,W_tilde);
 % cond(i)=calculateConductance(C_hat,W_tilde); %to evaluate conductance(optional)
 end
 
-%% Estimate the community number
+%%Estimate the community number
 [est_com_mod,ind_max_mod]=max(Q);
 % est_com_cond=cond(ind_max_mod); %to evaluate conductance(optional)
 est_num_com=K_set(ind_max_mod);
