@@ -38,7 +38,7 @@ close all;
 clear all;
 warning off;
 
-%% User inputs
+%%User inputs
 N_rho_initial=5; 
 N_rho=5; 
 rho_initial_min=0.1;
