@@ -1,4 +1,4 @@
-%% This function performs a fast spectral partitioning
+%% This function performs a fast spectral partitioning.
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
