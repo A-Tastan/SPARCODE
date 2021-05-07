@@ -1,4 +1,4 @@
-%% This function calculates the polarization score for W_hat
+%%This function calculates the polarization score for W_hat
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -29,15 +29,15 @@
 
 function polarization_score=calculatePolarizationScore(W_hat)
 
-%% Estimate the Fiedler vector 
+%%Estimate the Fiedler vector 
 y_hat=FiedlerVector(W_hat);
 
-%% Generate two subsets
+%%Generate two subsets
 [sorted_y_hat,~]=sort(y_hat);
 subspace_1=sorted_y_hat(sorted_y_hat<0);
 subspace_2=sorted_y_hat(sorted_y_hat>0);
 
-%% Calculate polarization of the partition
+%%Calculate polarization of the partition
 polarization_score=median(subspace_2)-median(subspace_1);
 
 end
