@@ -1,4 +1,4 @@
-%% This function estimates a robust sparse graph model W_tilde
+%%This function estimates a robust sparse graph model W_tilde
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -35,10 +35,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [W_tilde,degrees_W_tilde]=estimateRobustSparseGraphModel(W,rho_hat,maxIt,Tol,plotting)
 
-%% Estimate the sparse affinity matrix for the estimated penalty parameter
+%%Estimate the sparse affinity matrix for the estimated penalty parameter
 W_hat=estimateSparseAffinityMatrix(W,rho_hat,maxIt,Tol);
  
-%% Find a Threshold to eliminate the negligible similarity coefficients from the model
+%%Find a Threshold to eliminate the negligible similarity coefficients from the model
 sorted_W_hat=sort(W_hat);
 u=mean(sorted_W_hat,2); %Simplified similarity coefficients vector
 GMModel = fitgmdist(u,2,'CovarianceType','diagonal');
@@ -46,11 +46,11 @@ est_prob = posterior(GMModel,u);
 [~,ind_thr]=min(abs((est_prob(:,1)-est_prob(:,2)))); %T=argmin|v_i,2-v_i,1|
 Thr=u(ind_thr);
 
-%% Cut the edges in the estimated sparse graph model whose edge weight are smaller than the threshold
+%%Cut the edges in the estimated sparse graph model whose edge weight are smaller than the threshold
 indices = find(W_hat(:)<Thr);
 W_hat(indices) = 0;
 
-%% Detect outliers and form the affinity using estimated outlier-free feature vectors
+%%Detect outliers and form the affinity using estimated outlier-free feature vectors
 degrees=sum(W_hat~=0,2);
 [ind_outlierfree,~]=find(degrees);
 degrees_W_tilde=degrees(ind_outlierfree);
