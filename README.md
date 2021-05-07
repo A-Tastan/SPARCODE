@@ -19,3 +19,4 @@ or
 
 https://sourceforge.net/projects/sparsemodels/files/Group%20Lasso%20Shooting/
 
+[All_Steps_Sparcode.pdf](https://github.com/A-Tastan/SPARCODE/files/6442252/All_Steps_Sparcode.pdf)
