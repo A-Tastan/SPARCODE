@@ -1,4 +1,4 @@
-%% This function performs spline interpolation to estimate the penalty parameter
+%%This function performs spline interpolation to estimate the penalty parameter
 % 
 %  For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -35,11 +35,11 @@ if(nargin<3 || isempty(xq))
     xq=1e-3;
 end
 
-%% Apply Spline Interpolation
+%%Apply Spline Interpolation
 xx = min(rho_set):xq:max(rho_set);
 spline_polarization_vec= spline(rho_set,polarization_vec,xx);
 
-%% Estimate penalty parameter
+%%Estimate the penalty parameter
 [~,ind_rho_hat]=max(spline_polarization_vec);
 rho_hat=xx(ind_rho_hat);
 
