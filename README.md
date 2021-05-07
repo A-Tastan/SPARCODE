@@ -21,6 +21,6 @@ https://sourceforge.net/projects/sparsemodels/files/Group%20Lasso%20Shooting/
 
 
 
-![All_Steps_Sparcode](https://user-images.githubusercontent.com/83693413/117464576-15ed0a00-af51-11eb-837a-8d4af3e5244e.png)
+![All_Steps_Sparcode](https://user-images.githubusercontent.com/83693413/117464885-64020d80-af51-11eb-868d-88da132aa71c.png)
 
 
