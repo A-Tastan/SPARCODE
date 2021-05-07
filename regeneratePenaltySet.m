@@ -1,4 +1,4 @@
-%% This function regenerates the set of penalty parameters
+%%This function regenerates the set of penalty parameters
 % 
 % For details see:
 % [1] A. Tastan, Michael Muma, and Abdelhak M. Zoubir,"Sparsity-aware
@@ -34,7 +34,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function rho_set=regeneratePenaltySet(initial_rho_set,initial_polarization_vec,N_rho)
 
-%% Define the minimum and maximum boundaries for the candidate penalty parameters
+%%Define the minimum and maximum boundaries for the candidate penalty parameters
 [~,ind_maxpsc]=max(initial_polarization_vec);
 if(ind_maxpsc==length(initial_rho_set))
     rho_min=initial_rho_set(ind_maxpsc-1);
@@ -48,7 +48,7 @@ else if(ind_maxpsc==1)
     end
 end
 
-%% Define the new penalty parameter set
+%%Define the new penalty parameter set
 increasement=(rho_max-rho_min)/(N_rho-1);
 rho_set=rho_min:increasement:rho_max;
 
